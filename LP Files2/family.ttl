@@ -1,0 +1,40 @@
+@prefix fam: <http://example.com/owl/families#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+fam:Person a rdfs:Class .
+
+fam:hasChild a rdf:Property .
+
+fam:hasName a rdf:Property .
+
+fam:hasParent a rdf:Property .
+
+fam:hasSibling a rdf:Property .
+
+fam:hasSpouse a rdf:Property .
+
+fam:Arun_Prathan a fam:Person ;
+    fam:hasName "Arun Prathan" ;
+    fam:hasSpouse fam:Ardra_Suresh .
+
+fam:Jaysree_Suresh a fam:Person ;
+    fam:hasChild fam:Ardra_Suresh,
+        fam:Arsha_Suresh ;
+    fam:hasName "Jaysree Suresh" .
+
+fam:Suresh_Babu a fam:Person ;
+    fam:hasChild fam:Ardra_Suresh,
+        fam:Arsha_Suresh ;
+    fam:hasName "Suresh Babu" .
+
+fam:Ardra_Suresh a fam:Person ;
+    fam:hasName "Ardra Suresh" ;
+    fam:hasParent fam:Jaysree_Suresh,
+        fam:Suresh_Babu ;
+    fam:hasSibling fam:Arsha_Suresh ;
+    fam:hasSpouse fam:Arun_Prathan .
+
+fam:Arsha_Suresh a fam:Person ;
+    fam:hasName "Arsha Suresh" .
+

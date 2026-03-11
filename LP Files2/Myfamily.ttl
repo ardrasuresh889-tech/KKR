@@ -1,0 +1,63 @@
+@prefix ex: <http://example.com/family/suresh/> .
+@prefix fam: <http://example.com/owl/families#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:ArunPrathan a fam:Man ;
+    fam:hasAge 27 ;
+    fam:hasFatherInLaw ex:SureshBabu ;
+    fam:hasGender "Male"^^xsd:string ;
+    fam:hasMotherInLaw ex:JaysreeSuresh ;
+    fam:hasName "Arun Prathan"^^xsd:string ;
+    fam:hasSisterInLaw ex:ArshaSuresh ;
+    fam:hasSpouse ex:ArdraSuresh ;
+    fam:hasWife ex:ArdraSuresh .
+
+ex:ArshaSuresh a fam:Woman ;
+    fam:hasAge 29 ;
+    fam:hasBrotherInLaw ex:ArunPrathan ;
+    fam:hasFather ex:SureshBabu ;
+    fam:hasGender "Female"^^xsd:string ;
+    fam:hasMother ex:JaysreeSuresh ;
+    fam:hasName "Arsha Suresh"^^xsd:string ;
+    fam:hasParent ex:JaysreeSuresh,
+        ex:SureshBabu ;
+    fam:hasSibling ex:ArdraSuresh ;
+    fam:hasSister ex:ArdraSuresh .
+
+ex:JaysreeSuresh a fam:Woman ;
+    fam:hasAge 55 ;
+    fam:hasChild ex:ArdraSuresh,
+        ex:ArshaSuresh ;
+    fam:hasDaughter ex:ArdraSuresh,
+        ex:ArshaSuresh ;
+    fam:hasGender "Female"^^xsd:string ;
+    fam:hasHusband ex:SureshBabu ;
+    fam:hasName "Jaysree Suresh"^^xsd:string ;
+    fam:hasSonInLaw ex:ArunPrathan ;
+    fam:hasSpouse ex:SureshBabu .
+
+ex:SureshBabu a fam:Man ;
+    fam:hasAge 60 ;
+    fam:hasChild ex:ArdraSuresh,
+        ex:ArshaSuresh ;
+    fam:hasDaughter ex:ArdraSuresh,
+        ex:ArshaSuresh ;
+    fam:hasGender "Male"^^xsd:string ;
+    fam:hasName "Suresh Babu"^^xsd:string ;
+    fam:hasSonInLaw ex:ArunPrathan ;
+    fam:hasSpouse ex:JaysreeSuresh ;
+    fam:hasWife ex:JaysreeSuresh .
+
+ex:ArdraSuresh a fam:Woman ;
+    fam:hasAge 27 ;
+    fam:hasFather ex:SureshBabu ;
+    fam:hasGender "Female"^^xsd:string ;
+    fam:hasHusband ex:ArunPrathan ;
+    fam:hasMother ex:JaysreeSuresh ;
+    fam:hasName "Ardra Suresh"^^xsd:string ;
+    fam:hasParent ex:JaysreeSuresh,
+        ex:SureshBabu ;
+    fam:hasSibling ex:ArshaSuresh ;
+    fam:hasSister ex:ArshaSuresh ;
+    fam:hasSpouse ex:ArunPrathan .
+
