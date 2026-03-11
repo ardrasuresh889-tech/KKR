@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6/"
+     xml:base="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-6="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Takecourse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Takecourse">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#taughtby"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#hascorse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#hascorse">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#offerprogram"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#program"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#locatedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Takecourse"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#University"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#offerprogram -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#offerprogram">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#University"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#program"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#taughtby -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#taughtby">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#course"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Proffessor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#hascredits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#hascredits">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Proffessor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Proffessor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#University -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#University"/>
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#course -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#course">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#program"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#program -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#program">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Proffessor"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#AI_Master -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#AI_Master">
+        <rdf:type rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#program"/>
+        <untitled-ontology-6:hascorse rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Machinelearning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Jenny -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Jenny">
+        <rdf:type rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#student"/>
+        <untitled-ontology-6:Takecourse rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Machinelearning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Jonkopinuniversity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Jonkopinuniversity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#University"/>
+        <untitled-ontology-6:offerprogram rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#AI_Master"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Machinelearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Machinelearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#course"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Sweden -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Sweden">
+        <rdf:type rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#country"/>
+        <untitled-ontology-6:locatedIn rdf:resource="http://www.semanticweb.org/reshma/ontologies/2025/10/untitled-ontology-6#Sweden"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

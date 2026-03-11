@@ -1,0 +1,939 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17/"
+     xml:base="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:healthcare_group17="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#contraindicatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#contraindicatedWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment>Drug conflicts with another drug</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#diagnoseWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#diagnoseWith">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Patient"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Disease"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment>Patient diagnosed with disease</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#hasSideEffect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#hasSideEffect">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Symptom"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment>Drug causes side effect</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#hasSymptom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#hasSymptom">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Disease"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Symptom"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment>Disease manifests symptoms</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#prescribes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#prescribes">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Doctor"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment>Doctor prescribes drug</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#requires -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#requires">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Treatment"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment>Treatment requires drug</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#takesMedication -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#takesMedication">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Patient"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment>Patient takes medication</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#treatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#treatedBy">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Disease"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Treatment"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment>Disease is treated by treatment</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Disease -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Disease"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Doctor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Doctor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Patient -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Patient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Symptom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Symptom"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Treatment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Treatment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#hasAge">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Patient"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Patient&apos;s age</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#hasDosage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#hasDosage">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Drug dosage</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#hasName">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of entity</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#hasSeverity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#hasSeverity">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Symptom"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Severity level</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Antibiotic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Antibiotic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Antiviral -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Antiviral">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#ChronicDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#ChronicDisease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Disease"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Doctor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Doctor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#GeneticDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#GeneticDisease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#InfectiousDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#InfectiousDisease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Medication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Medication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Painkiller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Painkiller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Patient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PhysicalSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PhysicalSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PsychologicalSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PsychologicalSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Surgery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Surgery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Symptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Symptom">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Therapy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Therapy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Treatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Treatment">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Amoxicillin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Amoxicillin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Antibiotic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Anxiety -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Anxiety">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PsychologicalSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#ArtTherapy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#ArtTherapy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Therapy"/>
+        <rdfs:comment>Expressive therapy</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Aspirin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Aspirin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Painkiller"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Asthma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Asthma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#ChronicDisease"/>
+        <healthcare_group17:hasSymptom rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Asthma"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Atorvastatin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Atorvastatin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Medication"/>
+        <rdfs:comment>Cholesterol</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#COVID-19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#COVID-19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#InfectiousDisease"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#CataractSurgery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#CataractSurgery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Surgery"/>
+        <rdfs:comment>Eye lens replacement</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#CesareanSection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#CesareanSection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Surgery"/>
+        <rdfs:comment>Surgical childbirth</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Cough -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Cough">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PhysicalSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#CysticFibrosis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#CysticFibrosis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#GeneticDisease"/>
+        <rdfs:comment>Inherited disorder</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#David_Lee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#David_Lee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Patient"/>
+        <healthcare_group17:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28</healthcare_group17:hasAge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Depression -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Depression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PsychologicalSymptom"/>
+        <healthcare_group17:hasSideEffect rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Depression"/>
+        <healthcare_group17:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">54</healthcare_group17:hasAge>
+        <rdfs:comment>Persistent low mood</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Diabetes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Diabetes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#ChronicDisease"/>
+        <healthcare_group17:hasSymptom rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#HighBloodSugar"/>
+        <healthcare_group17:treatedBy rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Metformin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#DialecticalBehaviorTherapy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#DialecticalBehaviorTherapy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Therapy"/>
+        <rdfs:comment>Emotional regulation</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Diazepam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Diazepam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Medication"/>
+        <rdfs:comment>Anxiety</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Dr.Alex -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Dr.Alex">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Doctor"/>
+        <healthcare_group17:prescribes rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Amoxicillin"/>
+        <healthcare_group17:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65</healthcare_group17:hasAge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Dr.Clara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Dr.Clara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Doctor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Dr.Smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Dr.Smith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Doctor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Dr.Susan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Dr.Susan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Doctor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Fatigue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Fatigue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PhysicalSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Fever -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Fever">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PhysicalSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Headache -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Headache">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PhysicalSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#HeartBypassSurgery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#HeartBypassSurgery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Surgery"/>
+        <rdfs:comment>Coronary artery bypass</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Hemophilia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Hemophilia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#GeneticDisease"/>
+        <rdfs:comment>Blood clotting disorder</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#HighBloodSugar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#HighBloodSugar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PhysicalSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#HuntingtonDisease -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#HuntingtonDisease">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#GeneticDisease"/>
+        <rdfs:comment>Neurodegenerative</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Hypertension -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Hypertension">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#ChronicDisease"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Ibuprofen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Ibuprofen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Painkiller"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Influenza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Influenza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#InfectiousDisease"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Insulin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Insulin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+        <rdfs:comment>Drug for Diabetes</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Irritability -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Irritability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PsychologicalSymptom"/>
+        <rdfs:comment>Easily annoyed or angered</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#John_Smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#John_Smith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Patient"/>
+        <healthcare_group17:diagnoseWith rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Diabetes"/>
+        <healthcare_group17:hasSymptom rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Cough"/>
+        <healthcare_group17:takesMedication rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Metformin"/>
+        <healthcare_group17:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</healthcare_group17:hasAge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#KneeReplacement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#KneeReplacement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Surgery"/>
+        <rdfs:comment>Joint replacement</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Lisinopril -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Lisinopril">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+        <rdfs:comment>Drug for Hypertension</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Mariya_Sam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Mariya_Sam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Patient"/>
+        <healthcare_group17:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34</healthcare_group17:hasAge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Mary_Johnson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Mary_Johnson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Patient"/>
+        <healthcare_group17:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">62</healthcare_group17:hasAge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Metformin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Metformin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+        <rdfs:comment>Drug for Diabetes</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Migraine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Migraine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#ChronicDisease"/>
+        <healthcare_group17:diagnoseWith rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Migraine"/>
+        <healthcare_group17:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34</healthcare_group17:hasAge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#MoodSwings -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#MoodSwings">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PsychologicalSymptom"/>
+        <rdfs:comment>Rapid emotional changes</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Nausea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Nausea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PhysicalSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Oseltamivir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Oseltamivir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Antiviral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PanicAttacks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PanicAttacks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PsychologicalSymptom"/>
+        <rdfs:comment>Sudden episodes of fear</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Paracetamol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Paracetamol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+        <healthcare_group17:prescribes rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Paracetamol"/>
+        <healthcare_group17:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33</healthcare_group17:hasAge>
+        <rdfs:comment>Fever / pain</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PhysicalTherapy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PhysicalTherapy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Therapy"/>
+        <rdfs:comment>Rehabilitation</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Pneumonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Pneumonia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#InfectiousDisease"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PsychodynamicTherapy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PsychodynamicTherapy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Therapy"/>
+        <rdfs:comment>Insight-oriented therapy</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Sertraline -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Sertraline">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Medication"/>
+        <rdfs:comment>Depression / anxiety</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#ShortnessOfBreath -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#ShortnessOfBreath">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#PhysicalSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#SickleCellAnemia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#SickleCellAnemia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#GeneticDisease"/>
+        <rdfs:comment>Blood disorder</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#SpeechTherapy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#SpeechTherapy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Therapy"/>
+        <rdfs:comment>Communication therapy</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Tonsillectomy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Tonsillectomy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Surgery"/>
+        <rdfs:comment>Removal of tonsils</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Tuberculosis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Tuberculosis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#InfectiousDisease"/>
+        <healthcare_group17:diagnoseWith rdf:resource="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Pneumonia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Disease"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Drug"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cecompany/ontologies/2025/11/healthcare_group17#Symptom"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

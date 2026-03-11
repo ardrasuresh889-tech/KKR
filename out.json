@@ -1,0 +1,25 @@
+{
+  "Solver": "clingo version 5.8.0",
+  "Input": [
+    "generated_ontology.lp","reasoning_rules.lp"
+  ],
+  "Call": [
+    {
+      "Start": 0.000,
+      "Stop": 0.004
+    }
+  ],
+  "Result": "UNKNOWN",
+  "Models": {
+    "Number": 0,
+    "More": "yes"
+  },
+  "Calls": 1,
+  "Time": {
+    "Total": 0.004,
+    "Solve": 0.000,
+    "Model": 0.000,
+    "Unsat": 0.000,
+    "CPU": 0.002
+  }
+}
